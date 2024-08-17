@@ -34,18 +34,18 @@ A **Car Black Box** is a vehicle monitoring device that records data such as spe
 ### User Interaction Flow:
 
 1. **Startup:**
-   - The system initializes peripherals, reads the stored password, and displays the current time.
+   - The system initializes peripherals, reads the stored password from EEPROM, and displays the current time using RTC.
 
 2. **Event Logging:**
-   - Based on user input or vehicle events (e.g., collision detection), the system logs events with a timestamp and current speed.
+   - Based on user input or vehicle events such as Collision, Up or Down gear shift the system logs events with a timestamp and current speed.
 
 3. **Password Verification:**
-   - When accessing the menu, the user must enter a correct password. After three failed attempts, access is temporarily blocked.
+   - When accessing the menu, the user must enter a correct password. After three failed attempts, access is temporarily blocked for 120 seconds.
 
 4. **Menu Operations:**
-   - Users can view, download, or clear logs, set the time, or change the password through menu navigation.
+   - Users can View, Download, or Clear logs, Set the Time, or Change the current Password through menu navigation.
 
 5. **Data Management:**
-   - Logged data can be viewed on the display or downloaded via UART communication, ensuring easy access to stored information.
+   - Logged data can be viewed on the CLCD display or downloaded via UART communication, ensuring ease access to stored information.
 
 This Car Black Box system effectively combines real-time monitoring, event logging, and secure user interaction to serve as a comprehensive vehicle monitoring tool.
